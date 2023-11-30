@@ -1,0 +1,45 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $color-primary;
+
+    @include sm-down {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-size: $font-size-sm;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        @include sm-down {
+            width: 200px;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: $font-size-sm;
+        font-weight: 500;
+    }
+}

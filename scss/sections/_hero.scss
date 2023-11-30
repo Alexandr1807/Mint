@@ -1,0 +1,58 @@
+.hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    @include lg-down {
+        padding-top: 90px;
+        padding-bottom: 45px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include sm-down {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        max-width: 560px;
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        &-text {
+            margin-bottom: 40px;
+            font-size: $font-size-sm;
+            line-height: 30px;
+            font-weight: 800;
+        }
+
+        @include lg-down {
+            max-width: 450px;
+        }
+
+        @include sm-down {
+            margin: 0 auto;
+        }
+    }
+
+    &__image {
+        width: 570px;
+        height: 540px;
+        object-fit: cover;
+
+        @include lg-down {
+            width: 450px;
+            height: 420px;
+        }
+
+        @include sm-down {
+            display: none;
+        }
+    }
+}

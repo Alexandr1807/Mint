@@ -1,0 +1,37 @@
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+
+    background-color: $color-secondary;
+    border: none;
+
+    font-weight: 600;
+    font-size: $font-size-base;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: all .2s ease;
+
+    &:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    @include lg-down {
+        padding: 12px 24px;
+        font-size: $font-size-sm;
+    }
+
+    // &_sm {
+    //     padding: 12px 20px;
+
+    //     border-radius: 15px 2px;
+
+    //     &:hover {
+    //         border-radius: 2px 15px;
+    //     }
+    // }
+}

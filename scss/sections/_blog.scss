@@ -1,0 +1,169 @@
+.blog {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: $color-tertiary;
+
+    @include lg-down {
+        padding-top: 90px;
+        padding-bottom: 45px;
+    }
+
+    @include md-down {
+        padding-top: 60px;
+    }
+
+    &__title {
+        margin-bottom: 65px;
+
+        @include lg-down {
+            margin-bottom: 50px;
+        }
+
+        @include md-down {
+            margin-bottom: 20px;
+        }
+
+        @include sm-down {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        max-width: 540px;
+        margin-bottom: 70px;
+        font-size: $font-size-sm;
+        line-height: 30px;
+        font-weight: 800;
+
+        @include lg-down {
+            margin-bottom: 50px;
+        }
+
+        @include md-down {
+            margin-bottom: 20px;
+        }
+
+        @include sm-down {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm-down {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__card {
+        width: 370px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+
+        position: relative;
+
+        @include lg-down {
+            width: 290px;
+        }
+
+        @include md-down {
+            width: 220px;
+        }
+
+        @include sm-down {
+            width: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 280px;
+            margin-bottom: 30px;
+
+            @include md-down {
+                height: 230px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-content {
+            padding: 0 25px;
+
+            @include md-down {
+                padding: 0 15px;
+            }
+
+            h3 {
+                font-weight: 900;
+                font-size: $font-size-base;
+                margin-bottom: 30px;
+
+                @include md-down {
+                    margin-bottom: 15px;
+                }
+            }
+
+            p {
+                font-size: $font-size-sm;
+                font-weight: 700;
+                margin-bottom: 25px;
+
+                @include md-down {
+                    margin-bottom: 15px;
+                }
+            }
+
+            div {
+                font-size: $font-size-sm;
+                font-weight: 700;
+                margin-bottom: 25px;
+
+                @include md-down {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        &-hover {
+            opacity: 0;
+            width: 100%;
+            height: 280px;
+            background-color: $color-secondary;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: opacity .2s linear;
+
+            @include md-down {
+                height: 230px;
+            }
+
+            h4 {
+                font-size: 22px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+
+        &:hover {
+
+
+            .blog__card-hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}

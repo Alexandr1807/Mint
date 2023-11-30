@@ -1,0 +1,41 @@
+.partners {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: $color-tertiary;
+
+    @include lg-down {
+        padding-top: 90px;
+        padding-bottom: 45px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include sm-down {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            gap: 40px;
+        }
+
+        @include xs-down {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        img {
+            object-fit: contain;
+
+            @include md-down {
+                width: 90px;
+            }
+
+            @include sm-down {
+                align-self: center;
+            }
+        }
+    }
+}

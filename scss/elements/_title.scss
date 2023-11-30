@@ -1,0 +1,18 @@
+.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 900;
+    // line-height: 80px;
+
+    &_xxl {
+        font-size: 60px;
+
+        @include lg-down {
+            font-size: 50px;
+        }
+
+        @include md-down {
+            font-size: 40px;
+        }
+    }
+}
